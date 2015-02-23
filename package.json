@@ -2,6 +2,7 @@
   "name": "text-rank",
   "version": "0.0.1",
   "description": "Algorithm to automagically create a tag cloud from a text",
+  "main": "./main.js",
   "dependencies": {
     "pos": "^0.1.7-2",
     "underscore": "^1.7.0"
