@@ -1,0 +1,12 @@
+{
+  "name": "TextRank",
+  "version": "0.0.1",
+  "dependencies": {
+    "pos": "^0.1.7-2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "debug": "~2.1.1",
+    "jasmine-node": "^1.14.5"
+  }
+}
