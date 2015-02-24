@@ -10,6 +10,10 @@ var syntacticFilter = function(tag) {
     //skip Web links
     if (/^http\:\/\/.*$/.test(tag[0])) return false;
 
+    //skip 1-letter words
+    if (tag[0].length == 1) return false;
+
+
     switch(tag[1]) {
 
         case 'FW' : //foreign word
