@@ -21,17 +21,21 @@ var initGraph = function(wordGraph, wordList) {
             wordGraph[wordObj.word] = {
 
                 word: wordObj.word,
-                neighbors: []
+                neighbors: [],
+                _neighborMap: {}
             };
         }
     });
 };
 
-//TODO you have to check for unique neighbors!!!!
+
 var addEdge = function(node1, node2) {
 
-    node1.neighbors.push(node2);
-    node2.neighbors.push(node1);
+    if (!node1._neighborMap[node2.word]) {
+
+        node1.neighbors.push(node2);
+        node1._neighborMap[node2.word] = node2;
+    }
 };
 
 /**
@@ -43,9 +47,7 @@ var addEdge = function(node1, node2) {
  */
 var addEdges = function(wordGraph, wordList, edgeWindowSize) {
 
-    for(var cur=0; cur<wordList.length; cur++) {
-
-        var curWord = wordList[cur];
+    _.each(wordList, function(curWord, cur) {
 
         if (curWord.isIncluded) {
 
@@ -59,10 +61,11 @@ var addEdges = function(wordGraph, wordList, edgeWindowSize) {
                         neighborNode = wordGraph[neighborWord.word];
 
                     addEdge(curNode, neighborNode);
+                    addEdge(neighborNode, curNode);
                 }
             }
         }
-    }
+    });
 };
 
 
