@@ -1,14 +1,37 @@
 {
   "name": "text-rank",
   "version": "0.0.1",
-  "description": "Algorithm to automagically create a tag cloud from a text",
+  "description": "The TextRank algorithm that automagically creates a tag cloud from text",
+  "author": "Uriel Avalos <uri@frankandrobot.com>",
+  "scripts": {
+    "test": "jasmine-node tests"
+  },
   "main": "./main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankandrobot/text-rank"
+  },
+  "bugs": {
+    "url": "https://github.com/frankandrobot/text-rank/issues"
+  },
+  "keywords": [
+    "pagerank",
+    "textrank",
+    "tag",
+    "cloud",
+    "nlp",
+    "natural",
+    "language",
+    "processing"
+  ],
   "dependencies": {
-    "pos": "^0.1.7-2",
-    "underscore": "^1.7.0"
+    "pos": "~0.1.7-2",
+    "underscore": "~1.7.0"
   },
   "devDependencies": {
     "debug": "~2.1.1",
     "jasmine-node": "^1.14.5"
-  }
+  },
+  "analyze": true,
+  "license": "Apache"
 }

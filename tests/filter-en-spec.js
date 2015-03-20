@@ -1,4 +1,4 @@
-var filter = require('../src/filter-en'),
+var filter = require('../lib/filter-en'),
     _ = require('underscore');
 
 describe("filter", function () {

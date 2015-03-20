@@ -1,2 +1,2 @@
-exports.generateTags = require('./src/textrank').generateTags;
-exports.startTagging = require('./src/server').startTagging; //note this is not even beta!
+exports.generateTags = require('./lib/textrank').generateTags;
+exports.startTagging = require('./lib/server').startTagging; //note this is not even beta!

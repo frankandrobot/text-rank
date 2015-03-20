@@ -1,5 +1,5 @@
-var textrank = require('../src/textrank'),
-    filter = require('../src/filter-en'),
+var textrank = require('../lib/textrank'),
+    filter = require('../lib/filter-en'),
     _ = require('underscore');
 
 function round(value, decimals) {
